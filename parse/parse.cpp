@@ -409,7 +409,7 @@ Token getToken(void)
 	<local-declarations> ::= { <var-declaration> }
 	<statement-list> ::= { <statement> }
 	<statement> ::= <expression-stmt> | <compound-stmt> | <selection-stmt> | <iteration-stmt> | <return-stmt>
-	<exression-stmt> ::= [ <expression> ] ';'
+	<expression-stmt> ::= [ <expression> ] ';'
 	<selection-stmt> ::= 'if' '(' <expression> ')' <statement> [ 'else' <statement> ]
 	<iteration-stmt> ::= 'while' '(' <expression> ')' <statement>
 	<return-stmt> ::= 'return' <expression-stmt>
@@ -490,7 +490,7 @@ void printTree(TokenTree *tree) {
 				if (tree->isParam == 1)
 					fprintf(result, "Array Parameter, name: %s, type: %s\n", tree->attr.id, tree->type);
 				else
-					fprintf(result, "Array Variable Declaration, name: %s, type: %s, size: %d\n", tree->attr.id, tree->attr.sym, tree->arrsize);
+					fprintf(result, "Array Variable Declaration, name: %s, type: %s, size: %d\n", tree->attr.id, tree->type, tree->arrsize);
 				break;
 			case FunDeclare:
 				fprintf(result, "Function Declaration, name: %s, type: %s\n", tree->attr.id, tree->type);
