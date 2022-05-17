@@ -412,7 +412,7 @@ Token getToken(void)
 	<expression-stmt> ::= [ <expression> ] ';'
 	<selection-stmt> ::= 'if' '(' <expression> ')' <statement> [ 'else' <statement> ]
 	<iteration-stmt> ::= 'while' '(' <expression> ')' <statement>
-	<return-stmt> ::= 'return' <expression-stmt>
+	<return-stmt> ::= 'return' [ <expression> ] ';'
 	<expression> ::= <var> '=' <expression> | <simple-expression>
 	<var> ::= 'ID' [ '[' <expression> ']' ]
 	<simple-expression> ::= <additive-expression> [ <relop> <additive-expression> ]
