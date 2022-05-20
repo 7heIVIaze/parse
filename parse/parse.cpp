@@ -255,6 +255,7 @@ Token getToken(void)
 	char id[ID_LENGTH] = "";
 	int index = 0;
 	struct Token token;
+
 	token.type = (cnull);
 
 	do {
@@ -305,7 +306,7 @@ Token getToken(void)
 					ungetc(ch, source);
 				}
 				break;
-			case 7: // If the character is /
+			case 7: // If the ;character is /
 				ch = fgetc(source);
 				if (ch == '*') { // Start of comment
 					do
