@@ -2,6 +2,7 @@
 /*
 	Compiler Assignment
 	Cminus Parser in C
+	made by Sunggon Kim
 */
 #include <cstdio>
 #include <cstring>
